@@ -1,0 +1,205 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.str-chat__sidebar {
+  border-right: 1px solid #e5e7eb;
+  background: #fafafa;
+}
+.new-chat-btn {
+  width: 100%;
+  background: #3d3d3d;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.new-chat-btn:hover {
+  background: #504f4f;
+}
+
+.str-chat .str-chat__channel-list .str-chat__channel-list-react {
+  background-color: #0f172b;
+}
+
+/* .str-chat__channel-preview-container {
+  background-color: #171717;
+} */
+
+.str-chat__channel-preview-messenger str-chat__channel-preview:hover {
+  background-color: #171717;
+}
+
+.str-chat__channel-preview__action-buttons {
+  margin-bottom: 2.5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.str-chat__channel-list {
+  background-color: #0f172b !important;
+}
+
+.str-chat__channel-list-messenger__main {
+  background-color: #0f172b !important;
+}
+
+.str-chat__channel-preview-messenger--name {
+  color: white;
+}
+
+.str-chat__channel-preview__action-button--pin .str-chat__icon--pin {
+  color: white;
+}
+
+/* Change archive icon color */
+.str-chat__channel-preview__action-button--archive .str-chat__icon--archive-box {
+  color: white;
+}
+
+.str-chat__channel-preview-messenger--left {
+  display: none;
+}
+
+/* Optional: change on hover */
+.str-chat__channel-preview__action-button:hover svg {
+  background-color: #0f172b; /* hover color */
+}
+
+.str-chat__message-simple-name {
+  display: none;
+}
+.str-chat__mesage-simple-edited {
+  display: none;
+}
+
+[data-testid="avatar"] {
+  display: none !important;
+}
+.str-chat__avatar-fallback {
+  display: none !important;;
+}
+
+[data-testid="message-status-sent"] {
+  display: none !important;
+}
+
+[data-testid="message-edited-timestamp"] {
+  display: none !important;
+}
+
+.str-chat__date-separator-line {
+  display: none;
+}
+
+.str-chat__date-separator-date {
+  display: inline-block;
+  background: #f3f3f3;   /* light gray */
+  border: 1px solid #c5c5c5;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #555;
+}
+
+/* Center the separator wrapper */
+.str-chat__date-separator {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 10px 1px !important;
+}
+
+.str-chat__unread-messages-separator-wrapper {
+  display: none !important;
+}
+
+.str-chat__channel-preview__action-buttons {
+  display: none !important;
+}
+
+[data-testid="channel-preview-button"]:hover {
+  background-color: #334155 !important;
+}
+
+.str-chat__edit-message-form-options {
+  gap: 10px !important
+}
+
+.str-chat__textarea__textarea {
+  height: 60px !important;
+  min-height: 60px !important;
+}
+
+[data-testid="load-more-button"] {
+  background-color: #0f172b !important;
+}
+
+.str-chat__channel-list-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px; /* Reduce spacing between elements */
+  padding: 8px; /* Reduce overall padding */
+}
+
+.str-chat__channel-list-empty svg {
+  width: 60px !important;
+  height: 60px !important;
+  color: white;
+}
+
+.str-chat__channel-list-empty svg path {
+  fill: white !important;
+}
+
+.str-chat__channel-list-empty p {
+  font-size: 16px;   /* Reduce text size */
+  margin: 0;
+  color: white
+}
+
+@keyframes dropdown {
+  0% { opacity: 0; transform: translateY(-6px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-dropdown {
+  animation: dropdown 0.15s ease-out;
+}
+
+@keyframes wave {
+  0%, 100% { height: 0.75rem; }
+  50% { height: 2.5rem; }
+}
+.animate-wave {
+  animation: wave 1s infinite ease-in-out;
+}
+
