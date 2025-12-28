@@ -80,7 +80,7 @@ Each user’s data is fully isolated, ensuring privacy and security. The applica
 
 ---
 
-### 📎 File & Message Management
+### File & Message Management
 
 * PDFs can be associated with chat sessions
 * Download and manage uploaded documents easily
@@ -100,17 +100,5 @@ Each user’s data is fully isolated, ensuring privacy and security. The applica
 | **RAG Orchestration**      | LangChain             |
 | **Speech-to-Text**         | AssemblyAI            |
 | **Text-to-Speech**         | Google Gemini TTS API |
-
----
-
-## Data Security & Isolation
-
-* User-based data isolation across:
-
-  * PDFs
-  * Chat sessions
-  * Vector embeddings
-* Secure authentication ensures only authorized access
-* No document data is shared between users
 
 ---
